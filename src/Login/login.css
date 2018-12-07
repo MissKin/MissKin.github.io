@@ -1,0 +1,56 @@
+.login-box {
+  width: 80%;
+  height: 100%;
+  position:relative;
+  padding-top: 3rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.img-logo{
+  display: inline-block;
+  width: 100px;
+}
+.img-logo > img{
+  width: 100%;
+}
+.login-box .title {
+  font-size: 0.8rem;
+  color: #4b4948;
+  display:block;
+  padding-bottom:1.5rem;
+  text-align: center;
+  margin-top:0.6rem;
+}
+.login-box .section {
+  border-bottom: 1px solid #bdbdbd;
+  width:100%;
+  font-size: .7rem;
+}
+.login-btn{
+  border-bottom: 1px solid #bdbdbd;
+  height: 2rem;
+  line-height: 2rem;
+  margin-bottom:1rem;
+  width:100%;
+}
+.login-box .section input{
+  width: 100%;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: transparent;
+  font-size: .7rem;
+}
+.login-btn{
+  margin-top: 2rem;
+  background:#ffcc00;
+  text-align: center;
+  font-size: 0.7rem;
+  border:none;
+}
+.error{
+  font-size: 0.7rem;
+  color: #FF7300;
+  text-align: center;
+  width: 85%;
+}
