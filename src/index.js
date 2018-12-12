@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App'
 import './index.css';
-import Login from './Login/login'
+// import Login from './views/Login/login'
+import TodoBox from './views/TODO/todolist'
 // class App extends Component {
 //   render () {
 //     return (
@@ -23,7 +24,7 @@ import Login from './Login/login'
 //     )
 //   }
 // }
-ReactDOM.render(<Login/>, document.getElementById('root'));
+ReactDOM.render(<TodoBox/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
