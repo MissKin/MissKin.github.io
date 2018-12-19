@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import './todo.css'
 
 class TodoBox extends Component {
-  getInitialState = () => {
-    return {
+  constructor (props) {
+    super(props)
+    this.state = {
       data: [
         {"id": "0001", "task":"吃饭", "complete": "false"},
         {"id": "0002", "task":"睡觉", "complete": "false"},
@@ -41,15 +42,18 @@ class TodoBox extends Component {
     var { data } = this.state
     const id = this.generateId()
     this.setState({
-      data: data.concat([{'id': id, "task": task, 'complelte': 'false'}])
+      data: data.concat([{'id': id, "task": task, 'complete': 'false'}])
     })
+  }
+  componentDidMounted() {
+    this.getInitialState()
   }
   render () {
     console.log(this.state.data)
     const statistics = {
       todoCount: this.state.data.length || 0,
       todoCompleteCount: this.state.data.filter((item) => {
-        return item.complelte === 'true'
+        return item.complete === 'true'
       }).length
     }
     return (
@@ -74,7 +78,7 @@ class TodoList extends Component {
           taskId = {listItem.id}
           key = {listItem.id}
           task = {listItem.task}
-          complelte = {listItem.complelte}
+          complete = {listItem.complete}
           deleteTask = {this.props.deleteTask}
           toggleComplete = {this.props.toggleTask}
         />
@@ -95,22 +99,24 @@ class TodoItem extends Component {
     this.props.deleteTask(this.props.taskId)
   }
   handleMouseOver = () => {
-    console.log(this.refs.deleteBtn)
+    // console.log(this.refs.deleteBtn)
   }
   handleMouseOut = () => {
-    console.log(this.refs.deleteBtn)
+    // console.log(this.refs.deleteBtn)
   }
    render () {
      let task = this.props.task
      let classes = 'list-group-item'
      let itemChecked
-     if (this.props.complelte === 'true') {
+     console.log(this.props.complete)
+     if (this.props.complete === 'true') {
       task = <s>{task}</s>
       itemChecked = true
       classes += ' list-group-item-success'
      } else {
       itemChecked = false;
      }
+     console.log(itemChecked)
      return (
        <li className= {classes}
        onMouseOver = {this.handleMouseOver}

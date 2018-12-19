@@ -25,3 +25,6 @@
 .pull-right {
   float: right!important;
 }
+.list-group-item{
+  padding: 10px 0;
+}
