@@ -49,7 +49,6 @@ class TodoBox extends Component {
     this.getInitialState()
   }
   render () {
-    console.log(this.state.data)
     const statistics = {
       todoCount: this.state.data.length || 0,
       todoCompleteCount: this.state.data.filter((item) => {
@@ -108,7 +107,6 @@ class TodoItem extends Component {
      let task = this.props.task
      let classes = 'list-group-item'
      let itemChecked
-     console.log(this.props.complete)
      if (this.props.complete === 'true') {
       task = <s>{task}</s>
       itemChecked = true
@@ -116,7 +114,6 @@ class TodoItem extends Component {
      } else {
       itemChecked = false;
      }
-     console.log(itemChecked)
      return (
        <li className= {classes}
        onMouseOver = {this.handleMouseOver}
