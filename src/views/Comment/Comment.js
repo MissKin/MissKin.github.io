@@ -51,7 +51,6 @@ class Comment extends Component {
       this.props.onDeleteComment(this.props.index)
     }
   }
-// <span className="comment-delete" onClick={this.handleDelete.bind(this)}>删除</span>
   render () {
     const comment = this.props.comment
     return(

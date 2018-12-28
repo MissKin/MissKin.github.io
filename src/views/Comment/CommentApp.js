@@ -47,7 +47,7 @@ class CommentApp extends Component {
 
   handleDeleteComment (index) {
     let comments = this.state.comments
-    comments.splice(comments, 1)
+    comments.splice(index, 1)
     this.setState({comments})
     this._saveComments(comments)
   }
